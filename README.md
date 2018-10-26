@@ -44,11 +44,17 @@ to 63 pixels in both the x and y dimension. However, the user can choose to use 
 own values using the optional arguments:
 
 *`-cx` or `--cropx` followed by the number of pixels to crop in the x dimension
+
 *`-cy` or `--cropy` followed by the number of pixels to crop in the y dimension
+
 *`-sx` or `--startx` starting index of x (columns)
+
 *`-sy` or `--starty` starting index of y (rows)
+
 *`-ex` or `--endx` ending index of x 
+
 *`-ey` or `--endy` ending index of y
+
 
 
 #### Argument options
