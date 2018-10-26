@@ -65,53 +65,6 @@ dimension. It will also start at index 1
 
 
 
-**Create a png image file from RGB data:**
-
-```python
-import numpy as np
-from PIL import Image
-import vk4extract
-
-with open('example.vk4', 'rb') as in_file:
-    offsets = vk4extract.extract_offsets(in_file)
-    rgb_dict = vk4extract.extract_color_data(offsets, 'peak', in_file)
-
-rgb_data = rgb_dict['data']
-height = rgb_dict['height']
-width = rgb_dict['width']
-
-rgb_matrix = np.reshape(rgb_data, (height, width, 3))
-image = Image.fromarray(rgb_matrix, 'RGB')
-
-image.save('example_image.png', 'PNG')
-```
-
-**Create a csv text file from Light data:**
-
-```python
-import csv
-import numpy as np
-import vk4extract
-
-with open('example.vk4', 'rb') as in_file:
-    offsets = vk4extract.extract_offsets(in_file)
-    light_dict = vk4extract.extract_img_data(offsets, 'https://tecadmin.net/install-python-3-7-on-ubuntu-linuxmint/light', in_file)
-    
-light_data = light_dict['data']
-height = light_dict['height']
-width = light_dict['width']
-
-light_matrix = np.reshape(light_data, (height, width))
-
-with open('example_light.csv', 'w', newline='') as out_file:
-    writer = csv.writer(out_file, delimiter=',')
-    for row in light_matrix:
-        writer.writerow(row)
-
-```
-
-
-
 
 
 
