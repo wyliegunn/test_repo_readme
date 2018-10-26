@@ -1,28 +1,22 @@
-# vk4_driver
+# microscope-mosaic
 
-vk4_driver is a tool used to extract data from Keyence profilometry vk4 format
-data files and provide useful output formats for analysis (csv, tiff, jpeg, 
-png).
+Microscope mosaic is a script used to generate a mosaic image based off a
+2-d matrix of images extracted from vk4 Microscopy data files, though
+any matrix of images similarly obtained from a microscope or even a 
+matrix of images that are precisely and uniformally generated with the 
+intent to stitch them together should work.
 
 ## Getting Started
 
-The vk4_driver is meant to be used as command line script by running the 
-vk4_driver.py file with approprate arguments. However, it can also be 
-used as a module providing a flexible set of tools to process data from
-vk4 files 
+Microscope mosaic is meant to be used as a command line script by running the 
+microscope_mosaic.py file with approprate arguments. 
 
 ### Prerequisites
 
-In order to execute the vk4_driver the NumPy and PIL packages need to be
+In order to execute microscope_moscaic the PIL package need to be
 installed
 
-First, install `numpy`:
-
-```sh
-$ pip install numpy
-```
-
-Next, install `PIL`:
+Install `PIL`:
 
 ```sh
 $ pip install PIL
@@ -30,12 +24,9 @@ $ pip install PIL
 
 ### Install
 
-To install, download the 4 source files:
+To install, simply download the source file:
 
-* `VK4container.py`
-* `vk4extract.py`
-* `vk4out.py`
-* `vk4_driver.py`
+* `microscope_mosaic.py`
 
 ### Usage (script)
 
