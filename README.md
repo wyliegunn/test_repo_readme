@@ -43,18 +43,24 @@ the starting and ending x and y values used in the script. And it defaults cropp
 to 63 pixels in both the x and y dimension. However, the user can choose to use their
 own values using the optional arguments:
 
-* `-cx` or `--cropx` followed by the number of pixels to crop in the x dimension
-* `-cy` or `--cropy` followed by the number of pixels to crop in the y dimension
-* `-sx` or `--startx` starting index of x (columns)
+* `-cx` or `--cropx` number of pixels to crop in the x dimension
+* `-cy` or `--cropy` number of pixels to crop in the y dimension
+* `-sx` or `--startx` starting index of x (columns) 
 * `-sy` or `--starty` starting index of y (rows)
 * `-ex` or `--endx` ending index of x 
 * `-ey` or `--endy` ending index of y
+    *note: the starting and ending indexes can be used to define submatrices
+    *of images.
 
 e.g.
 
 ```sh
 $ python3 microscope_mosiac -i ./images/FY09_DE09_270_Y1_X1.png -o mosaic.png -cx 70 -cy 90 -sx 1 -sy 1 -ex 10 -ey 12 
 ```
+
+The above command usage overwrites the default values and will crop the component
+images by 70 pixels a side in the x dimension and 90 pixels a side in the y 
+dimension. It will also start at index 1
 
 
 
