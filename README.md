@@ -40,7 +40,7 @@ $ python3 microscope_mosiac -i <file path to an image> -o <file path for output>
 
 The file path to the image for input can be any image from the set of images used to 
 create the mosaic. Also, all of the image file names need to follow a format 
-<base file name>Y<index #>_X<index #>.<ext>
+<base file name>Y<index #>X<index #>.<ext>
 
 The above command will use a handful of default arguments, it assumes that the 
 matrix of images is 15 rows by 20 columns and will use those values to define
