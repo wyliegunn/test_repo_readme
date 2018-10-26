@@ -30,12 +30,26 @@ To install, simply download the source file:
 
 ### Usage (script)
 
-First, the module `vk4_driver` can be used as a script with the following args:
+The module `microscope_mosaic.py` can be used as a script with the following required
+args:
 
 ```sh
-$ python3 vk4_driver -i<vk4 filename> -t<type of output> -l<layers of data> 
-    -o<optional output filename>
+$ python3 microscope_mosiac -i <file path to an image> -o <file path for output> 
 ```
+
+The above command will use a handful of default arguments, it assumes that the 
+matrix of images is 15 rows by 20 columns and will use those values to define
+the starting and ending x and y values used in the script. And it defaults cropping
+to 63 pixels in both the x and y dimension. However, the user can choose to use their
+own values using the optional arguments:
+
+*`-cx` or `--cropx` followed by the number of pixels to crop in the x dimension
+*`-cy` or `--cropy` followed by the number of pixels to crop in the y dimension
+*`-sx` or `--startx` starting index of x (columns)
+*`-sy` or `--starty` starting index of y (rows)
+*`-ex` or `--endx` ending index of x 
+*`-ey` or `--endy` ending index of y
+
 
 #### Argument options
 
