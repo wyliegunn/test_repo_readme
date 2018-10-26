@@ -49,8 +49,9 @@ own values using the optional arguments:
 * `-sy` or `--starty` starting index of y (rows)
 * `-ex` or `--endx` ending index of x 
 * `-ey` or `--endy` ending index of y
-    *note: the starting and ending indexes can be used to define submatrices
-    *of images.
+   
+   *note: the starting and ending indexes can be used to define submatrices
+   *of images.
 
 e.g.
 
